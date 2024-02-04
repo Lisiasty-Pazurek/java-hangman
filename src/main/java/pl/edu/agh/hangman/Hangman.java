@@ -1,8 +1,9 @@
 package pl.edu.agh.hangman;
 
 import pl.edu.agh.hangman.Checker.LetterChecker;
-import pl.edu.agh.hangman.Checker.WordChecker;
+import pl.edu.agh.hangman.Checker.Masker;
 import pl.edu.agh.hangman.WordReader.WordCompatibilityChecker;
+import pl.edu.agh.hangman.WordReader.WordRandomizer;
 import pl.edu.agh.hangman.WordReader.WordReaderFromFile;
 
 import java.util.ArrayList;
@@ -66,15 +67,17 @@ public class Hangman {
         WordReaderFromFile reader = new WordReaderFromFile("src/main/resources/slowa.txt");
         ArrayList<String> wordList = reader.GetWordList();
         wordList = WordCompatibilityChecker.GetGameCompatibleWordList(wordList);
+        String word = WordRandomizer.GetRandowWord(wordList);
+        LetterChecker letterChecker = new LetterChecker();
+        Masker masker = new Masker(word, letterChecker);
 
-        String word = wordList.get(4);
         System.out.println(word);
+        System.out.println(masker.getMasking());
 
+        masker.unmaskWord("A");
 
-        String s = "ffdsfsf   fdfdf";
-        WordChecker wordChecker = new WordChecker();
-        String mask = wordChecker.MaskWord(s);
-        System.out.println(mask);
+        System.out.println(masker.getMasking());
+
 
 //        ArrayList<Integer> letterIndexes = LetterChecker.checkForLetter(word, "");
 //        for (Integer i: letterIndexes ){
