@@ -40,4 +40,11 @@ public class GameState {
         this.count = count++;
     }
 
+    public int getMaxCount() {
+        return maxCount;
+    }
+
+    public void setMaxCount(int maxCount) {
+        this.maxCount = maxCount;
+    }
 }
