@@ -54,6 +54,7 @@ public class Hangman {
                     "========"
     };
 
+    //komentarz
     public static void main(String[] args) {
     }
 }
