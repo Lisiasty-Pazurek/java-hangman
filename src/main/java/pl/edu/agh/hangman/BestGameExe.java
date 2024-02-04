@@ -31,14 +31,8 @@ public class BestGameExe {
             Character letter = scanner.next().charAt(0);
             //masker.unmaskWord(letter.toString());
             if (masker.unmaskWord(letter.toString())) {
-                System.out.println(" ree" + gameState.getCount());
-                gameState.nextMove();
+                 gameState.nextMove();
             }
-
-            System.out.println(" ree" + gameState.getCount());
-
-            //TODO: Unmask checked letters, increment gameState count by 1,
-
 
         }
 
