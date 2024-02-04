@@ -2,7 +2,6 @@ package pl.edu.agh.hangman;
 
 public class Hangman {
 
-
     public static final String[] HANGMANPICS = new String[]{
             "  +---+\n" +
                     "  |   |\n" +
