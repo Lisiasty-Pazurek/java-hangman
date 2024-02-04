@@ -1,32 +1,32 @@
 package pl.edu.agh.hangman.GameState;
 
 public class GameState {
-    private String wordToFind = "";
-    private int count = 0;
-    private String currentWord;
+    private static String wordToFind = "";
+    private static int count = 0;
+    private static String currentWord;
 
-    public String getWordToFind() {
+    public static String getWordToFind() {
         return wordToFind;
     }
 
-    public void setWordToFind(String wordToFind) {
-        this.wordToFind = wordToFind;
+    public static void setWordToFind(String wordToFind) {
+        wordToFind = wordToFind;
     }
 
-    public int getCount() {
+    public static int getCount() {
         return count;
     }
 
-    public void setCount(int count) {
-        this.count = count;
+    public static void setCount(int count) {
+        count = count;
     }
 
-    public String getCurrentWord() {
+    public static String getCurrentWord() {
         return currentWord;
     }
 
-    public void setCurrentWord(String currentWord) {
-        this.currentWord = currentWord;
+    public static void setCurrentWord(String currentWord) {
+        currentWord = currentWord;
     }
     public void nextMove() {
         this.count = count++;

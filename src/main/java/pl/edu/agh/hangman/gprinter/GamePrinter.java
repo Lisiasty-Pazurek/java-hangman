@@ -1,5 +1,6 @@
 package pl.edu.agh.hangman.gprinter;
 
+import pl.edu.agh.hangman.GameState.GameState;
 import pl.edu.agh.hangman.Hangman;
 
 public class GamePrinter {
@@ -13,6 +14,12 @@ public class GamePrinter {
     public static void printGameWord(String word)
     {
         System.out.println(word);
+    }
+
+    public static void refreshBoard()
+    {
+        System.out.println(Hangman.HANGMANPICS[GameState.getCount()]);
+        System.out.println(GameState.getCurrentWord());
     }
 
 
