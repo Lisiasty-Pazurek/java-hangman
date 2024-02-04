@@ -34,11 +34,11 @@ public class Masker {
         return String.join("", letters);
     }
 
-    public void unmaskWord(String letter){
+    public boolean unmaskWord(String letter){
         ArrayList<Integer> letterIndexes = letterChecker.checkForLetter(word, letter);
         if (letterIndexes.isEmpty()){
             System.out.println("miss");
-            return;
+            return true;
         }
         for (Integer index: letterIndexes) {
             char c = letter.charAt(0);
@@ -46,6 +46,8 @@ public class Masker {
             StringBuilder newMask = new StringBuilder(getMasking());
             newMask.setCharAt(index, c);
             setMasking(newMask.toString());
+
         }
+        return false;
     }
 }

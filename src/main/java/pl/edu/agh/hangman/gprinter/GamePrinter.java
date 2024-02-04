@@ -18,7 +18,7 @@ public class GamePrinter {
     public static void refreshBoard(GameState gameState)
     {
 
-        printGameBoard(Hangman.HANGMANPICS, gameState.getMaxCount());
+        printGameBoard(Hangman.HANGMANPICS, gameState.getCount());
         printGameWord(gameState.getCurrentWord());
     }
 

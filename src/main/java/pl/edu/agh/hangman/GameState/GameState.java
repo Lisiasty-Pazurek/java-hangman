@@ -26,7 +26,7 @@ public class GameState {
     }
 
     public void setCount(int count) {
-        count = count;
+        this.count = count;
     }
 
     public String getCurrentWord() {
@@ -34,10 +34,10 @@ public class GameState {
     }
 
     public void setCurrentWord(String currentWord) {
-        currentWord = currentWord;
+        this.currentWord = currentWord;
     }
     public void nextMove() {
-        this.count = count++;
+        this.count++;
     }
 
     public int getMaxCount() {
