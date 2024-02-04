@@ -1,5 +1,9 @@
 package pl.edu.agh.hangman;
 
+import pl.edu.agh.hangman.Checker.LetterChecker;
+
+import java.util.ArrayList;
+
 public class Hangman {
 
     public static final String[] HANGMANPICS = new String[]{
