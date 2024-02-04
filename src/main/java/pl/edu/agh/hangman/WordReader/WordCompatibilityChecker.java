@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WordCompatibilityChecker {
-    static ArrayList<String> GetGameCompatibleWordList(ArrayList<String> wordList)
+    public static ArrayList<String> GetGameCompatibleWordList(ArrayList<String> wordList)
     {
         ArrayList<String> compatibleWordList = new ArrayList<>();
         for (String word: wordList              ) {
