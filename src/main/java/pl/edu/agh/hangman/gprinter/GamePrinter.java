@@ -5,10 +5,9 @@ import pl.edu.agh.hangman.Hangman;
 
 public class GamePrinter {
 
-
-    public static void printGameBoard(int state)
+    public static void printGameBoard(String[] imagePool, int count)
     {
-        System.out.println(Hangman.HANGMANPICS[state]);
+        System.out.println(imagePool[count]);
     }
 
     public static void printGameWord(String word)
@@ -16,10 +15,11 @@ public class GamePrinter {
         System.out.println(word);
     }
 
-    public static void refreshBoard()
+    public static void refreshBoard(GameState gameState)
     {
-        System.out.println(Hangman.HANGMANPICS[GameState.getCount()]);
-        System.out.println(GameState.getCurrentWord());
+
+        System.out.println(Hangman.HANGMANPICS[gameState.getCount()]);
+        System.out.println(gameState.getCurrentWord());
     }
 
 
